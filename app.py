@@ -6,8 +6,7 @@ import google.generativeai as genai
 load_dotenv()  # Take environment variables from .env
 
 # Configure Google API key
-os.getenv("GOOGLE_API_KEY")
-genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
+genai.configure(api_key=st.secrets["GOOGLE_API_KEY"])
 
 # Initialize Streamlit app
 st.set_page_config(page_title="Transly",
